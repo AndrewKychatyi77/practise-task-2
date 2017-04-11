@@ -2,30 +2,29 @@ package my.praktikums;
 
 import com.sun.istack.internal.NotNull;
 
-import java.util.List;
-
-
 
 public  abstract  class Person {
+
 
     String name;
     Male father;
     Female mother;
-    List <Person> children;
 
-    public Person(String name, @NotNull Male father, @NotNull Female mother){
-        if ( father == null || mother == null){
+    public Person(String name, @NotNull Male father, @NotNull Female mother) {
+        if (father == null || mother == null) {
             throw new IllegalArgumentException("Повинні бути батьки");
         }
         this.name = name;
         this.father = father;
         this.mother = mother;
+
     }
 
-    public Person (String name){
+    public Person(String name) {
         this.name = name;
         this.father = Male.DEFAULT;
         this.mother = Female.DEFAULT;
+
     }
 
     public static final Person DEFAULT = new Person() {
@@ -43,9 +42,9 @@ public  abstract  class Person {
 
 
     public Person() {
-        this.name="Невідомий";
-        this.mother=Female.DEFAULT;
-        this.father=Male.DEFAULT;
+        this.name = "Невідомий";
+        this.mother = Female.DEFAULT;
+        this.father = Male.DEFAULT;
     }
 
     public Male getFather() {
@@ -61,3 +60,11 @@ public  abstract  class Person {
     }
 
 }
+
+
+
+
+
+
+
+

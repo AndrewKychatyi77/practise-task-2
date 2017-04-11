@@ -16,5 +16,6 @@ public class SampleFamilyProvider {
 
     public Male makeFamilyTree (){
         return yuri;
+
     }
 }
